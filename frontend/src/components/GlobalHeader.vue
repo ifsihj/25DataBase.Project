@@ -1,23 +1,27 @@
 <template>
   <div id="global-header" class="header">
     <a-row :wrap="false">
-      <a-col flex="250px"
-        ><div class="title-bar">
+      <a-col flex="250px">
+        <div class="title-bar">
           <img class="logo" src="../assets/logo.svg" alt="logo" />
           <div class="title">数据库系统项目中心</div>
         </div>
       </a-col>
-      <a-col flex="auto"
-        ><a-menu
+      <a-col flex="auto">
+        <a-menu
           v-model:selectedKeys="current"
           mode="horizontal"
           :items="items"
           class="menu"
           @click="handleMenuClick"
-      /></a-col>
-      <a-col flex="80px">
+        />
+      </a-col>
+      <a-col flex="150px">
         <div class="button">
-          <a-button type="primary" href="/user/login">登录</a-button>
+          <a-space size="middle" class="button">
+            <a-button type="primary" href="/user/login">登录</a-button>
+            <a-button type="default" href="/user/register">注册</a-button>
+          </a-space>
         </div>
       </a-col>
     </a-row>
@@ -26,6 +30,7 @@
 <script lang="ts" setup>
 import { h, ref } from "vue";
 import { useRouter } from "vue-router";
+
 const router = useRouter();
 const current = ref<string[]>(["/"]);
 import {
@@ -33,6 +38,7 @@ import {
   AppstoreOutlined,
   SettingOutlined,
   CrownOutlined,
+  NotificationOutlined,
 } from "@ant-design/icons-vue";
 import { MenuProps } from "ant-design-vue";
 //const current = ref<string[]>(["mail"]);
@@ -51,7 +57,7 @@ const items = ref<MenuProps["items"]>([
   },
   {
     key: "/discussionBoard",
-    icon: () => h(SettingOutlined),
+    icon: () => h(NotificationOutlined),
     label: "讨论板",
     title: "讨论板",
   },
@@ -60,6 +66,12 @@ const items = ref<MenuProps["items"]>([
     icon: () => h(CrownOutlined),
     label: "用户管理",
     title: "用户管理",
+  },
+  {
+    key: "/about",
+    icon: () => h(SettingOutlined),
+    label: "关于我们",
+    title: "关于我们",
   },
 ]);
 
@@ -74,20 +86,24 @@ const handleMenuClick: MenuProps["onClick"] = (e) => {
   height: 48px;
   background: #fff;
 }
+
 .title-bar {
   display: flex;
   align-items: center;
   background: white;
   height: 48px;
 }
+
 .title {
   font-size: 17px;
   color: black;
   margin-left: 16px;
 }
+
 .logo {
   height: 48px;
 }
+
 .button {
   display: flex;
   align-items: center;

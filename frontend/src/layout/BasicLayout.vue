@@ -9,7 +9,7 @@
           <a-breadcrumb-item>App</a-breadcrumb-item>
         </a-breadcrumb>
         <a-layout style="padding: 24px 0; background: #fff">
-          <a-layout-sider width="200" style="background: #fff">
+          <!-- <a-layout-sider width="200" style="background: #fff">
             <a-menu
               v-model:selectedKeys="selectedKeys2"
               v-model:openKeys="openKeys"
@@ -53,14 +53,14 @@
                 <a-menu-item key="12">option12</a-menu-item>
               </a-sub-menu>
             </a-menu>
-          </a-layout-sider>
+          </a-layout-sider> -->
           <a-layout-content :style="{ padding: '0 24px', minHeight: '280px' }">
             <router-view />
           </a-layout-content>
         </a-layout>
       </a-layout-content>
       <a-layout-footer style="text-align: center">
-        <a href="http://ifsihj.github.io" target="_blank">code for fun!</a>
+        <a href="http://www.pku.edu.cn" target="_blank">code for fun!</a>
       </a-layout-footer>
     </a-layout>
   </div>
