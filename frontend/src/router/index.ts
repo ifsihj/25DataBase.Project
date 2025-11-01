@@ -21,7 +21,7 @@ const routes: Array<RouteRecordRaw> = [
     name: "projectManagement",
     component: () =>
       import(
-        /* webpackChunkName: "projectManagement" */ "../views/projectManagement.vue"
+        /* webpackChunkName: "projectManagement" */ "../views/ProjectManagementView.vue"
       ),
   },
   {
@@ -29,7 +29,7 @@ const routes: Array<RouteRecordRaw> = [
     name: "discussionBoard",
     component: () =>
       import(
-        /* webpackChunkName: "discussionBoard" */ "../views/discussionBoard.vue"
+        /* webpackChunkName: "discussionBoard" */ "../views/discussionBoardView.vue"
       ),
   },
   {

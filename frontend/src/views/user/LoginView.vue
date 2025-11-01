@@ -53,7 +53,7 @@
         >
           登录
         </a-button>
-        <div class="or-text">Or <a href="">register now!</a></div>
+        <div class="or-text">还没有账号，<a href="">去注册!</a></div>
       </a-form-item>
     </a-form>
   </div>
@@ -62,6 +62,7 @@
 <script lang="ts" setup>
 import { reactive, computed } from "vue";
 import { UserOutlined, LockOutlined } from "@ant-design/icons-vue";
+import { login } from "@/api/user";
 
 interface FormState {
   username: string;
@@ -75,8 +76,13 @@ const formState = reactive<FormState>({
   remember: true,
 });
 
-const onFinish = (values: any) => {
-  console.log("Success:", values);
+const onFinish = async (values: FormState) => {
+  try {
+    const res = await login(values.username, values.password);
+    console.log("登录成功", res);
+  } catch (error) {
+    console.error("登录失败", error);
+  }
 };
 
 const onFinishFailed = (errorInfo: any) => {
@@ -99,7 +105,7 @@ const disabled = computed(() => {
 
 .login-form {
   width: 100%;
-  max-width: 300px; /* 窄一点 */
+  max-width: 400px; /* 窄一点 */
   padding: 24px;
   background: #fff;
   border-radius: 8px;
