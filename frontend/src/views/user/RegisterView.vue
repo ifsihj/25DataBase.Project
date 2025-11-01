@@ -110,7 +110,7 @@ const onFinish = async () => {
     // backend returns 201 with message on success
     if (res && res.status === 201) {
       message.success("注册成功，请登录");
-      router.push("/login");
+      router.push("/user/login");
     } else {
       // show backend message or generic
       const errMsg = res?.data?.error || res?.data?.message || "注册失败";
@@ -127,7 +127,7 @@ const onFinishFailed = (errorInfo: any) => {
 };
 
 const goLogin = () => {
-  router.push("/login");
+  router.push("/user/login");
 };
 
 const disabled = computed(() => {

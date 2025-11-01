@@ -63,6 +63,8 @@
 import { reactive, computed } from "vue";
 import { UserOutlined, LockOutlined } from "@ant-design/icons-vue";
 import { login } from "@/api/user";
+import { message } from "ant-design-vue";
+import router from "@/router";
 
 interface FormState {
   username: string;
@@ -79,9 +81,18 @@ const formState = reactive<FormState>({
 const onFinish = async (values: FormState) => {
   try {
     const res = await login(values.username, values.password);
-    console.log("登录成功", res);
-  } catch (error) {
-    console.error("登录失败", error);
+    const token = res?.data?.access_token;
+    if (token) {
+      localStorage.setItem("token", token);
+      message.success("登录成功");
+      router.push({ path: "/" });
+    } else {
+      message.error("登录失败");
+      throw new Error("No token received");
+    }
+  } catch (error: any) {
+    const msg = error.response?.data?.error || "登录失败，请检查用户名和密码";
+    message.error(msg);
   }
 };
 

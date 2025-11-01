@@ -6,16 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c4cb8df6-4d1a-4ddd-bea6-5f47f506b4be" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/api/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/api/user.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/request.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/useLoginUserStore.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/utils/request.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/utils/request.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/discussionBoard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/discussionBoardView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/views/projectManagement.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/ProjectManagementView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/views/user/LoginView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/user/LoginView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/views/user/RegisterView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/views/user/RegisterView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +66,7 @@
       <workItem from="1761908716849" duration="4297000" />
       <workItem from="1761918772822" duration="490000" />
       <workItem from="1761992676653" duration="3044000" />
-      <workItem from="1762006391162" duration="1649000" />
+      <workItem from="1762006391162" duration="2964000" />
     </task>
     <servers />
   </component>

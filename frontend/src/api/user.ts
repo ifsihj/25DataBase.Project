@@ -3,6 +3,7 @@ import { request } from "@/utils/request";
 export interface User {
   id: number;
   username: string;
+  email?: string;
 }
 
 export function getUsers() {
@@ -24,18 +25,10 @@ export function login(username: string, password: string) {
     url: "/api/auth/login",
     method: "post",
     data: { username, password },
-  }).then((res: any) => {
-    // backend returns { access_token: "..." }
-    const token = res?.data?.access_token;
-    if (token) {
-      // store under "token" so request interceptor picks it up
-      localStorage.setItem("token", token);
-    }
-    return res;
   });
 }
 
-export function register(username: string, password: string, email: string) {
+export function register(username: string, password: string, email?: string) {
   return request({
     url: "/api/auth/register",
     method: "post",
